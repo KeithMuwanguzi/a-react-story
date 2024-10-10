@@ -1,9 +1,14 @@
 const About = () => {
     return ( 
         <div className="about">
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, enim a fermentum ullamcorper, ipsum neque pellentesque ipsum, id fermentum mauris ex vel ipsum. Sed semper, neque id consectetur consectetur, mauris felis semper libero, at consectetur arcu ipsum et odio. Nulla facilisi. In hac habitasse platea dictumst. Donec vel urna vel ipsum lobortis consectetur.</p>
-            <p>Proin auctor, nunc a vulputate mattis, quam neque condimentum velit, in consectetur ipsum libero vel felis. Donec vel urna vel ipsum lobortis consectetur. Nulla facilisi. In hac habitasse platea dictumst. Donec vel urna vel ipsum lobortis consectetur.</p>
+            <h2>About us</h2>
+            <p>Welcome to YoBlogs, a space where ideas, stories, and knowledge come together. Whether you're here to gain insights, get inspired, or simply discover something new, you've found the right place.</p>
+            <p>At YoBlogs, we believe in the power of words to shape perspectives and spark conversations. Our mission is to provide meaningful content on a variety of topics, from technology and lifestyle to personal growth and everything in between. Each post is crafted with care to inform, entertain, and encourage our readers to explore new horizons.</p>
+            <p>Founded by Keith Jeyson, YoBlogs was born out of a passion for writing and a desire to connect with like-minded individuals. We aim to create a community where ideas are shared, and experiences are valued. Whether you're a long-time reader or new to our blog, we’re glad to have you here.</p>
+            <p>Thank you for being part of our journey!
+            Stay curious, stay inspired.</p>
+            <p>Muwanguzi Keith Jonathan <br/>
+            Founder, YoBlogs</p>
         </div>
      );
 }

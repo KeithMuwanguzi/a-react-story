@@ -56,3 +56,12 @@
 .error {
   color:#f1356d
 }
+
+.about p {
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.boss {
+  font-weight: bold;
+}

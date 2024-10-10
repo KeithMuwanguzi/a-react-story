@@ -1,5 +1,6 @@
 import BlogList from "./BlogList";
 import useFetch from "./useFetch";
+import {Link} from 'react-router-dom';
 
 const Home = () => {
 
@@ -13,6 +14,7 @@ const Home = () => {
         <div className="home">
             {error && <div className="error">{error}</div>}
             {loading && !error && <div className="author">Loading ...</div>}
+            <Link to='/create'><p>Add New Blog</p></Link>
             {data.length !== 0 && <BlogList blogs={data} title='All Blogs' handleDelete={handleDelete}/>}
             {johnSmithBlogs.length !== 0 && <BlogList blogs={johnSmithBlogs} title='Olga Bewsey' handleDelete={handleDelete}/>}
         </div>
