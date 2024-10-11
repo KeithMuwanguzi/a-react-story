@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Create from "./components/Create";
 import Contacts from "./components/Contacts";
 import About from "./components/About";
+import BlogDetail from "./components/BlogDetail";
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/blog/:id">
+            <BlogDetail />
           </Route>
         </Switch>
       </div>
