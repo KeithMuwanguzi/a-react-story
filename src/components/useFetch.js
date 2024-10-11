@@ -20,15 +20,7 @@ const useFetch = (url) => {
         });
     },[url]);
 
-    const handleDelete = (id)=>{
-        const newBlogs = data.filter((blog) => {
-            return blog.id !== id;
-        });
-
-        setData(newBlogs);
-    }
-
-    return {data, loading, error, handleDelete};
+    return {data, loading, error};
 }
 
 export default useFetch;

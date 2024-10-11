@@ -1,22 +1,20 @@
+import Alert from "./Alert";
 import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 import {Link} from 'react-router-dom';
 
 const Home = () => {
 
-    const {data, loading, error, handleDelete} = useFetch('http://localhost:8080/blogs');
-    
-    const johnSmithBlogs = data.filter((blog) => blog.author === 'Olga Bewsey');
+    const {data, loading, error} = useFetch('http://localhost:8080/blogs');
 
     
 
     return ( 
         <div className="home">
-            {error && <div className="error">{error}</div>}
-            {loading && !error && <div className="author">Loading ...</div>}
+            {error && <Alert message={error} type='error'/>}
+            {loading && !error && <Alert message='Loading Please wait...' type='info'/>}
             <Link to='/create'><p className="homep">Add New Blog</p></Link>
-            {data.length !== 0 && <BlogList blogs={data} title='All Blogs' handleDelete={handleDelete}/>}
-            {johnSmithBlogs.length !== 0 && <BlogList blogs={johnSmithBlogs} title='Olga Bewsey' handleDelete={handleDelete}/>}
+            {data.length !== 0 ? <BlogList blogs={data} title='All Blogs' />: <div><p>No blogs.</p></div>}
         </div>
     );
 }
